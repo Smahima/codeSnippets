@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/Smahima/codeSnippets#readme",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "mongoose": "^4.10.8",
     "mustache": "^2.3.0",
     "mustache-express": "^1.2.5",
     "sessions": "0.0.2-7"
