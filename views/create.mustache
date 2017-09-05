@@ -8,9 +8,8 @@
     <p>Create new code snippet:</p>
     <form class="" action="/create" method="post">
       Title: <input type="text" name="title" value=""><br>
-      Code: <input type="text" name="code" value=""><br>
+      Code: <textarea name="code" rows="10" cols="75"></textarea><br>
       Notes: <input type="text" name="notes" value=""><br>
-      Tags: <input type="text" name="tags" value="">
    <select id="languages" class="drop_down" name="language">
           <option value="javascipt" selected>Javascript</option>
           <option value="java">Java</option>
@@ -18,6 +17,13 @@
           <option value="react">React</option>
           <option value="ruby">Ruby</option>
     </select>
+    <select id="tags" class="list" name="tags">
+           <option value="authentication" selected>authentiation</option>
+           <option value="database">databas</option>
+           <option value="front-end">front-end</option>
+           <option value="middleware">middleware</option>
+           <option value="security">security</option>
+     </select>
     <button type="submit" name="button">Create</button>
       </form>
   </body>
