@@ -17,6 +17,17 @@ app.get('/', function (req, res) {
   res.render('index');
 })
 
+app.post('/', function(req, res) {
+  console.log(req.body);
+  const user = models.User.login({
+    name: req.body.name,
+    password: req.body.password
+  })
+  user.login().then(function() {
+    res.redirect('/mysnippets');
+  })
+});
+
 app.get('/mysnippets', function (req, res) {
   res.render('index');
 })
@@ -28,6 +39,22 @@ app.get('/create', function (req, res) {
 app.get('/edit', function (req, res) {
   res.render('index');
 })
+
+app.get('/register', function (req, res) {
+  res.render('register');
+})
+
+app.post('/register', function(req, res) {
+  console.log(req.body);
+  const user = models.User.build({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password
+  })
+  register.save().then(function(newUser) {
+    res.redirect('/mysnippets');
+  })
+});
 
 app.get('/search', function (req, res) {
   res.render('index');

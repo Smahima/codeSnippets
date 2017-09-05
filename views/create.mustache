@@ -7,8 +7,18 @@
   <body>
     <p>Create new code snippet:</p>
     <form class="" action="/create" method="post">
-   Username: <input type="text" name="username"><br>
-   Password <input type="password" name="password"><br>
-   <button type="submit" name="button">Create</button>
+      Title: <input type="text" name="title" value=""><br>
+      Code: <input type="text" name="code" value=""><br>
+      Notes: <input type="text" name="notes" value=""><br>
+      Tags: <input type="text" name="tags" value="">
+   <select id="languages" class="drop_down" name="language">
+          <option value="javascipt" selected>Javascript</option>
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="react">React</option>
+          <option value="ruby">Ruby</option>
+    </select>
+    <button type="submit" name="button">Create</button>
+      </form>
   </body>
 </html>
